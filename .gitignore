@@ -1,0 +1,16 @@
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Build
+.gradle
+build
+
+# IntelliJ
+.idea
+
