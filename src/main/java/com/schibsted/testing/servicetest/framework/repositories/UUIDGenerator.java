@@ -6,6 +6,9 @@ import java.util.UUID;
 
 public class UUIDGenerator implements IIdGenerator<UUID> {
 
+    public UUIDGenerator() {
+    }
+
     public UUID generateId() {
         return UUID.randomUUID();
     }

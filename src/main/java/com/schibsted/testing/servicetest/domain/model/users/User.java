@@ -1,9 +1,9 @@
 package com.schibsted.testing.servicetest.domain.model.users;
 
-public class NewUser {
+public class User {
     private String username;
 
-    public NewUser(String username) {
+    public User(String username) {
         this.username = username;
     }
 

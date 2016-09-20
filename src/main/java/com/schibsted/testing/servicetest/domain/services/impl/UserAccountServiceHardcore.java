@@ -3,20 +3,21 @@ package com.schibsted.testing.servicetest.domain.services.impl;
 
 import com.schibsted.testing.servicetest.domain.model.users.User;
 import com.schibsted.testing.servicetest.domain.model.users.UserAccount;
+import com.schibsted.testing.servicetest.domain.repositories.IIdGenerator;
 import com.schibsted.testing.servicetest.domain.repositories.IUserAccountRepository;
 import com.schibsted.testing.servicetest.domain.services.IUserAccountService;
-import com.schibsted.testing.servicetest.domain.repositories.IIdGenerator;
+import com.schibsted.testing.servicetest.framework.repositories.QuiteComplexIdGenerator;
 
 import java.util.Optional;
 import java.util.UUID;
 
-public class UserAccountService implements IUserAccountService {
+public class UserAccountServiceHardcore implements IUserAccountService {
 
-    private IIdGenerator<UUID> idGenerator;
+    private QuiteComplexIdGenerator idGenerator;
     private IUserAccountRepository userAccountRepository;
 
-    public UserAccountService(final IIdGenerator<UUID> idGenerator,
-                              final IUserAccountRepository userAccountRepository) {
+    public UserAccountServiceHardcore(final QuiteComplexIdGenerator idGenerator,
+                                      final IUserAccountRepository userAccountRepository) {
         this.idGenerator = idGenerator;
         this.userAccountRepository = userAccountRepository;
     }

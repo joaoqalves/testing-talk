@@ -17,10 +17,10 @@ public class SquareTest {
     }
 
     @Test
-    public void calculateAreaSameWidthAndHeight() {
-
+    public void calculateArea_shouldReturnRectangleArea_withSameHeightAndWidth() {
         // Given a rectangle
         Rectangle r = this.shapeFactory.newRectangle();
+
         // When setting 5 as width
         r.setWidth(5);
         // And 5 as height
@@ -30,10 +30,12 @@ public class SquareTest {
         assertEquals(25, r.calculateArea());
     }
 
+/*
     @Test
-    public void calculateAreaDifferentWidthAndHeight() {
+    public void calculateArea_shouldReturnRectangleArea_withDifferentHeightAndWidth() {
         // Given a rectangle
         Rectangle r = this.shapeFactory.newRectangle();
+
         // When setting 6 as width
         r.setWidth(6);
         // And 5 as height
@@ -41,6 +43,6 @@ public class SquareTest {
 
         // Then the area should be equals to 30
         assertEquals(30, r.calculateArea());
-    }
+    }*/
 
 }

@@ -1,6 +1,6 @@
 package com.schibsted.testing;
 
-import com.schibsted.testing.servicetest.domain.model.users.NewUser;
+import com.schibsted.testing.servicetest.domain.model.users.User;
 import com.schibsted.testing.servicetest.domain.model.users.UserAccount;
 import com.schibsted.testing.servicetest.domain.repositories.IUserAccountRepository;
 import com.schibsted.testing.servicetest.domain.repositories.IIdGenerator;
@@ -25,15 +25,17 @@ public class UserAccountServiceTest {
     public void before() {
         IUserAccountRepository userAccountRepository = new InMemoryUserAccountRepository();
         IIdGenerator<UUID> idGenerator = new MockIdGenerator();
-        this.userAccountService = new UserAccountService(idGenerator, userAccountRepository);
+        userAccountService = new UserAccountService(idGenerator, userAccountRepository);
     }
 
     @Test
     public void saveUser() {
         // Given a new user
-        NewUser newUser = new NewUser(USER_TEST_1);
+        User user = new User(USER_TEST_1);
+
         // When saving it
-        UserAccount savedUser = this.userAccountService.save(newUser);
+        UserAccount savedUser = userAccountService.save(user);
+
         // Then we should get the user saved in the database
         assertEquals(USER_TEST_1, savedUser.getUsername());
     }
@@ -41,14 +43,15 @@ public class UserAccountServiceTest {
     @Test
     public void findUser() {
         // We won't test this since it's tested above :)
-        this.userAccountService.save(new NewUser(USER_TEST_1));
+        userAccountService.save(new User(USER_TEST_1));
 
         // Given a user ID
         String id = USER_TEST_1_UUID;
+
         // When searching for it
-        Optional<UserAccount> foundUser = this.userAccountService.find(UUID.fromString(id));
+        Optional<UserAccount> foundUser = userAccountService.find(UUID.fromString(id));
+
         // Then we should get the respective UserAccount
         assertEquals(Optional.of(USER_TEST_1), foundUser.map(UserAccount::getUsername));
     }
-
 }
