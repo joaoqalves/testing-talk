@@ -1,11 +1,11 @@
 package com.schibsted.testing;
 
-import com.schibsted.testing.domain.model.users.NewUser;
-import com.schibsted.testing.domain.model.users.UserAccount;
-import com.schibsted.testing.domain.repositories.IUserAccountRepository;
-import com.schibsted.testing.domain.repositories.IIdGenerator;
-import com.schibsted.testing.domain.services.impl.UserAccountService;
-import com.schibsted.testing.framework.repositories.InMemoryUserAccountRepository;
+import com.schibsted.testing.servicetest.domain.model.users.NewUser;
+import com.schibsted.testing.servicetest.domain.model.users.UserAccount;
+import com.schibsted.testing.servicetest.domain.repositories.IUserAccountRepository;
+import com.schibsted.testing.servicetest.domain.repositories.IIdGenerator;
+import com.schibsted.testing.servicetest.domain.services.impl.UserAccountService;
+import com.schibsted.testing.servicetest.framework.repositories.InMemoryUserAccountRepository;
 import org.junit.Before;
 import org.junit.Test;
 

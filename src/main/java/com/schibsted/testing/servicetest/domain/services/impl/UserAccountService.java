@@ -1,11 +1,11 @@
-package com.schibsted.testing.domain.services.impl;
+package com.schibsted.testing.servicetest.domain.services.impl;
 
 
-import com.schibsted.testing.domain.model.users.NewUser;
-import com.schibsted.testing.domain.model.users.UserAccount;
-import com.schibsted.testing.domain.repositories.IUserAccountRepository;
-import com.schibsted.testing.domain.services.IUserAccountService;
-import com.schibsted.testing.domain.repositories.IIdGenerator;
+import com.schibsted.testing.servicetest.domain.model.users.NewUser;
+import com.schibsted.testing.servicetest.domain.model.users.UserAccount;
+import com.schibsted.testing.servicetest.domain.repositories.IUserAccountRepository;
+import com.schibsted.testing.servicetest.domain.services.IUserAccountService;
+import com.schibsted.testing.servicetest.domain.repositories.IIdGenerator;
 
 import java.util.Optional;
 import java.util.UUID;

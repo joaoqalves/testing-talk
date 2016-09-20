@@ -1,7 +1,7 @@
 package com;
 
-import com.schibsted.testing.domain.model.Rectangle;
-import com.schibsted.testing.framework.ShapeFactory;
+import com.schibsted.testing.shapes.Rectangle;
+import com.schibsted.testing.shapes.ShapeFactory;
 import org.junit.Before;
 import org.junit.Test;
 

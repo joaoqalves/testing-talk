@@ -1,4 +1,4 @@
-package com.schibsted.testing.domain.model.users;
+package com.schibsted.testing.servicetest.domain.model.users;
 
 import java.util.UUID;
 

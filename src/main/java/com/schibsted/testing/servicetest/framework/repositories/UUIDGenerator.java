@@ -1,6 +1,6 @@
-package com.schibsted.testing.framework.repositories;
+package com.schibsted.testing.servicetest.framework.repositories;
 
-import com.schibsted.testing.domain.repositories.IIdGenerator;
+import com.schibsted.testing.servicetest.domain.repositories.IIdGenerator;
 
 import java.util.UUID;
 

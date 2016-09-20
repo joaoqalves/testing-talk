@@ -1,4 +1,4 @@
-package com.schibsted.testing.domain.model.users;
+package com.schibsted.testing.servicetest.domain.model.users;
 
 public class NewUser {
     private String username;

@@ -1,4 +1,4 @@
-package com.schibsted.testing.domain.model;
+package com.schibsted.testing.shapes;
 
 public class Square extends Rectangle {
 

@@ -1,4 +1,4 @@
-package com.schibsted.testing.domain.repositories;
+package com.schibsted.testing.servicetest.domain.repositories;
 
 import java.util.Optional;
 

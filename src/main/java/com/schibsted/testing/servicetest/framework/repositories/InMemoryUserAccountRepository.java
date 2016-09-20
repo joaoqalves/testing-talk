@@ -1,7 +1,7 @@
-package com.schibsted.testing.framework.repositories;
+package com.schibsted.testing.servicetest.framework.repositories;
 
-import com.schibsted.testing.domain.model.users.UserAccount;
-import com.schibsted.testing.domain.repositories.IUserAccountRepository;
+import com.schibsted.testing.servicetest.domain.model.users.UserAccount;
+import com.schibsted.testing.servicetest.domain.repositories.IUserAccountRepository;
 
 import java.util.Optional;
 import java.util.UUID;
