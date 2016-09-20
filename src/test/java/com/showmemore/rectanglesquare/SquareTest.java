@@ -1,4 +1,4 @@
-package com;
+package com.showmemore.rectanglesquare;
 
 import com.schibsted.testing.shapes.Rectangle;
 import com.schibsted.testing.shapes.ShapeFactory;

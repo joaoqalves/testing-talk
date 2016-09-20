@@ -7,17 +7,18 @@ import com.schibsted.testing.servicetest.domain.repositories.IIdGenerator;
 import com.schibsted.testing.servicetest.domain.repositories.IUserAccountRepository;
 import com.schibsted.testing.servicetest.domain.services.IUserAccountService;
 import com.schibsted.testing.servicetest.framework.repositories.QuiteComplexIdGenerator;
+import com.schibsted.testing.servicetest.framework.repositories.QuiteComplexUserAccountRepository;
 
 import java.util.Optional;
 import java.util.UUID;
 
-public class UserAccountServiceHardcore implements IUserAccountService {
+public class HardcoreUserAccountService implements IUserAccountService {
 
     private QuiteComplexIdGenerator idGenerator;
-    private IUserAccountRepository userAccountRepository;
+    private QuiteComplexUserAccountRepository userAccountRepository;
 
-    public UserAccountServiceHardcore(final QuiteComplexIdGenerator idGenerator,
-                                      final IUserAccountRepository userAccountRepository) {
+    public HardcoreUserAccountService(final QuiteComplexIdGenerator idGenerator,
+                                      final QuiteComplexUserAccountRepository userAccountRepository) {
         this.idGenerator = idGenerator;
         this.userAccountRepository = userAccountRepository;
     }

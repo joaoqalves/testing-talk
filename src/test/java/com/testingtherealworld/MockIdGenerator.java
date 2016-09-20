@@ -1,4 +1,4 @@
-package com.schibsted.testing;
+package com.testingtherealworld;
 
 import com.schibsted.testing.servicetest.domain.repositories.IIdGenerator;
 

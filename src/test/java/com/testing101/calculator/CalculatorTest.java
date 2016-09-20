@@ -1,4 +1,4 @@
-package com.schibsted.testing;
+package com.testing101.calculator;
 
 import com.schibsted.testing.calculator.Calculator;
 import org.junit.Test;
