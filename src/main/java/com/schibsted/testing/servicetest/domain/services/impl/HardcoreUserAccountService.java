@@ -3,16 +3,14 @@ package com.schibsted.testing.servicetest.domain.services.impl;
 
 import com.schibsted.testing.servicetest.domain.model.users.User;
 import com.schibsted.testing.servicetest.domain.model.users.UserAccount;
-import com.schibsted.testing.servicetest.domain.repositories.IIdGenerator;
-import com.schibsted.testing.servicetest.domain.repositories.IUserAccountRepository;
-import com.schibsted.testing.servicetest.domain.services.IUserAccountService;
+import com.schibsted.testing.servicetest.domain.services.UserAccountService;
 import com.schibsted.testing.servicetest.framework.repositories.QuiteComplexIdGenerator;
 import com.schibsted.testing.servicetest.framework.repositories.QuiteComplexUserAccountRepository;
 
 import java.util.Optional;
 import java.util.UUID;
 
-public class HardcoreUserAccountService implements IUserAccountService {
+public class HardcoreUserAccountService implements UserAccountService {
 
     private QuiteComplexIdGenerator idGenerator;
     private QuiteComplexUserAccountRepository userAccountRepository;
@@ -28,7 +26,7 @@ public class HardcoreUserAccountService implements IUserAccountService {
         return this.userAccountRepository.save(new UserAccount(id, user.getUsername()));
     }
 
-    public Optional<UserAccount> find(final UUID id) {
+    public Optional<UserAccount> search(final UUID id) {
         return this.userAccountRepository.find(id);
     }
 }

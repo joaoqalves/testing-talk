@@ -1,10 +1,10 @@
 package com.schibsted.testing.servicetest.framework.repositories;
 
-import com.schibsted.testing.servicetest.domain.repositories.IIdGenerator;
+import com.schibsted.testing.servicetest.domain.repositories.IdGenerator;
 
 import java.util.UUID;
 
-public class UUIDGenerator implements IIdGenerator<UUID> {
+public class UUIDGenerator implements IdGenerator<UUID> {
 
     public UUIDGenerator() {
     }

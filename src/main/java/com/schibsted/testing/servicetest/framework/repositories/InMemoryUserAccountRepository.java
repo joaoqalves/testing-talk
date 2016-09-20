@@ -1,13 +1,13 @@
 package com.schibsted.testing.servicetest.framework.repositories;
 
 import com.schibsted.testing.servicetest.domain.model.users.UserAccount;
-import com.schibsted.testing.servicetest.domain.repositories.IUserAccountRepository;
+import com.schibsted.testing.servicetest.domain.repositories.UserAccountRepository;
 
 import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class InMemoryUserAccountRepository implements IUserAccountRepository {
+public class InMemoryUserAccountRepository implements UserAccountRepository {
 
     private ConcurrentHashMap<UUID, UserAccount> database;
 

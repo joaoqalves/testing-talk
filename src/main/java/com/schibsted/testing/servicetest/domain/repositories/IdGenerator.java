@@ -1,5 +1,5 @@
 package com.schibsted.testing.servicetest.domain.repositories;
 
-public interface IIdGenerator<T> {
+public interface IdGenerator<T> {
     T generateId();
 }

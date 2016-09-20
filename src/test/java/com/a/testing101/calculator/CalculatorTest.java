@@ -1,4 +1,4 @@
-package com.testing101.calculator;
+package com.a.testing101.calculator;
 
 import com.schibsted.testing.calculator.Calculator;
 import org.junit.Test;
@@ -8,14 +8,14 @@ import static org.junit.Assert.assertEquals;
 public class CalculatorTest {
 
   @Test
-  public void sum_shouldAdd2Numbers() throws Exception {
-    //Given a calculator
+  public void givenACalculatorWhenAddingTwoNumbersThenSucceeds() {
+    // Given
     Calculator calculator = new Calculator();
 
-    //When adding 2 and 4
+    // When
     Double result = calculator.add(2.0, 4.0);
 
-    //Then result must be 6
+    // Then
     assertEquals(new Double(6.0), result);
   }
 }
