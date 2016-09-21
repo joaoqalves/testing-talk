@@ -13,6 +13,11 @@ public class UntestableUserAccountService {
   private InMemoryUserAccountRepository inMemoryUserAccountRepository;
 
   public Optional<UserAccount> searchById(UUID uuid) {
-    return inMemoryUserAccountRepository.find(uuid);
+    if("NotAllowedUser".equals(StaticClassWithComplexOperations.getUser().getUsername())){
+      return inMemoryUserAccountRepository.find(uuid);
+    }else{
+      return Optional.empty();
+    }
   }
 }
+

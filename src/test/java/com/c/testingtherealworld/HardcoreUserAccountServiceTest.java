@@ -11,20 +11,27 @@ public class HardcoreUserAccountServiceTest {
 
 
   @Test
-  public void saveUser() {
-    // Given a new user
-    HashMap<String, String> dictionary = createDictionary();
-    QuiteComplexIdGenerator idGenerator = new QuiteComplexIdGenerator("ExtremeQuality", 123, dictionary);
-    QuiteComplexUserAccountRepository userAccountRepository = new QuiteComplexUserAccountRepository("DB address", 987);
+  public void givenAHardCoreUserAccountServiceWhenSavingThenSucceeds() {
+    // Given
+    QuiteComplexIdGenerator idGenerator = new QuiteComplexIdGenerator(calculateQuality(), 123, createDictionary());
+    QuiteComplexUserAccountRepository userAccountRepository = new QuiteComplexUserAccountRepository(calculateDbAddress(), 987);
 
-    HardcoreUserAccountService userAccountServiceTest = new HardcoreUserAccountService
-        (idGenerator, userAccountRepository);
-    // When saving it
+    HardcoreUserAccountService userAccountService = new HardcoreUserAccountService(idGenerator, userAccountRepository, "anotherHardClass");
+    // When
 
 
-    // Then we should get the user saved in the database
+    // Then
 
   }
+
+  private String calculateQuality() {
+    return "Hard to get quality string";
+  }
+
+  private String calculateDbAddress() {
+    return "hard to get DB address";
+  }
+
 
   private HashMap<String, String> createDictionary() {
     //Expensive operations
